@@ -6,7 +6,7 @@ body{
     margin: 0;
 }
 .content-limiter{
-    max-width: 1170px;
+    max-width: 1070px;
     margin: 0 auto;
 }
 
@@ -61,6 +61,13 @@ width: 70%;
 
     .header-extra-item{
         margin-left: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    i.fa{
+        padding: 8px;
+        color: colors.$header-icon-color
     }
 }
 
@@ -73,6 +80,53 @@ width: 70%;
 
 .banner{
     width: 100%;
-    height: 250px;
-    background-color: rgb(196, 191, 217);
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(64, 16, 255);
+
+    .content-limiter{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+    }
+
+    h2{
+        margin: 0;
+        padding: 0;
+        font-size: 2.8rem;
+    }
+    .banner-description{
+        font-size: 1.2em;
+    }
+
+    .banner-search-form{
+        display: flex;
+       
+        input{
+          width: 40%;
+          padding: 20px 30px;
+          border: none;
+          outline: 0;
+          font-family: 'inter';
+          font-size: 1rem;
+          border: 1px solid #eee;
+        }
+        button{
+            background-color: rgb(0, 231, 139);
+            border: none;
+            outline: 0;
+            padding: 20px 40px;
+            display: flex;
+            font-size: .9rem;
+            font-family: 'inter';
+            color: #fff;
+            i{
+                margin: 0 10px;
+            }
+        }
+    }
 }

@@ -1,3 +1,5 @@
+/* General Colors*/
+/* Header */ 
 body {
   background-color: #f3f3f3;
   font-family: "inter";
@@ -6,7 +8,7 @@ body {
 }
 
 .content-limiter {
-  max-width: 1170px;
+  max-width: 1070px;
   margin: 0 auto;
 }
 
@@ -62,6 +64,13 @@ body {
 }
 .header-extras .header-extra-item {
   margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-extras i.fa {
+  padding: 8px;
+  color: #5c5c5c;
 }
 
 .header-extras .user-avatar--header {
@@ -72,8 +81,51 @@ body {
 
 .banner {
   width: 100%;
-  height: 250px;
-  background-color: rgb(196, 191, 217);
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(64, 16, 255);
+}
+.banner .content-limiter {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+.banner h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.8rem;
+}
+.banner .banner-description {
+  font-size: 1.2em;
+}
+.banner .banner-search-form {
+  display: flex;
+}
+.banner .banner-search-form input {
+  width: 40%;
+  padding: 20px 30px;
+  border: none;
+  outline: 0;
+  font-family: "inter";
+  font-size: 1rem;
+  border: 1px solid #eee;
+}
+.banner .banner-search-form button {
+  background-color: rgb(0, 231, 139);
+  border: none;
+  outline: 0;
+  padding: 20px 40px;
+  display: flex;
+  font-size: 0.9rem;
+  font-family: "inter";
+  color: #fff;
+}
+.banner .banner-search-form button i {
+  margin: 0 10px;
 }
 
 /*# sourceMappingURL=main.css.map */
