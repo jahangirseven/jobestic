@@ -82,13 +82,27 @@ body {
 .banner {
   width: 100%;
   min-height: 350px;
+  position: relative;
   display: flex;
   align-items: center;
+  z-index: 1;
   background-color: rgb(64, 16, 255);
+}
+.banner:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background-image: url("http://lockthemes.com/ennex/wp-content/uploads/sites/13/2022/10/bgt-1.png");
+  background-size: cover;
+  background-position: center top;
+  opacity: 0.2;
 }
 .banner .content-limiter {
   width: 100%;
   height: 100%;
+  padding: 100px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -97,7 +111,7 @@ body {
 .banner h2 {
   margin: 0;
   padding: 0;
-  font-size: 2.8rem;
+  font-size: 3.8rem;
 }
 .banner .banner-description {
   font-size: 1.2em;
@@ -126,6 +140,18 @@ body {
 }
 .banner .banner-search-form button i {
   margin: 0 10px;
+}
+.banner .banner-stats {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+}
+.banner .banner-stats .stats-item {
+  margin-right: 30px;
+}
+.banner .banner-stats .stats-item h1 {
+  font-size: 2.4rem;
+  margin: 0 0 5px 0;
 }
 
 /*# sourceMappingURL=main.css.map */
