@@ -1,12 +1,11 @@
 @use "colors";
 body{
-    background-color: #f3f3f3;
-    font-family: 'inter';
+     font-family: 'inter';
     padding: 0;
     margin: 0;
 }
 .content-limiter{
-    max-width: 1070px;
+    max-width: 1170px;
     margin: 0 auto;
 }
 
@@ -120,16 +119,33 @@ width: 70%;
 
     .banner-search-form{
         display: flex;
-       
+        >span.form-input-container{
+          width: 50%;
+          display: block;
+          position: relative;
+
+          i{
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            font-size: 1.2rem;
+            order: 1;
+            color: rgb(205, 205, 205);
+          }
+            
+        }
         input{
-          width: 40%;
-          padding: 20px 30px;
+          width: 90%;
+          padding: 20px 30px 20px 50px;
           border: none;
           outline: 0;
           font-family: 'inter';
           font-size: 1rem;
+          position: relative;
           border: 1px solid #eee;
         }
+
+        
         button{
             background-color: rgb(0, 231, 139);
             border: none;
@@ -157,3 +173,78 @@ width: 70%;
         }
     }
 } 
+
+
+.section-categories{
+   .content-limiter{
+     padding: 90px 0;
+
+     .section-heading{
+        padding: 0;
+        margin: 0 auto;
+        font-size: 3rem;
+        text-align: center;
+     }
+     .section-secondary-heading{
+        text-align: center;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        color:rgb(13, 0, 255) ;
+     }
+     .section-description{
+        font-size: 0.85rem;
+        line-height: 22px;
+        text-align: center;
+     }
+   }
+}
+
+.homepage-categories{
+    width: 100%;
+    display: flex;
+     margin-top: 60px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    .single-category{
+        width: 23%;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        transition: 300ms  ;
+        background-color: rgb(248, 248, 248);
+        border: 1px solid #eee;
+        &:hover{
+            transition: 400ms  ;
+        background-color: rgb(240, 240, 240);
+
+        }
+        .job-category-title{
+            font-size: 1.1rem;
+            margin:  20px auto 5px auto;
+            text-decoration: none;
+            font-weight: 500;
+            color: colors.$section-header-color;
+        }
+        i{
+            width: 50px;
+            height: 50px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            font-size: 1.4rem;
+            padding: 4px;
+            color: #fff;
+            background-color: rgb(90, 90, 242);
+        }
+
+        .jobs-in-category{
+            font-size: 0.8rem;
+        }
+    }
+}

@@ -1,14 +1,14 @@
 /* General Colors*/
 /* Header */ 
+/* Texts */
 body {
-  background-color: #f3f3f3;
   font-family: "inter";
   padding: 0;
   margin: 0;
 }
 
 .content-limiter {
-  max-width: 1070px;
+  max-width: 1170px;
   margin: 0 auto;
 }
 
@@ -119,13 +119,27 @@ body {
 .banner .banner-search-form {
   display: flex;
 }
+.banner .banner-search-form > span.form-input-container {
+  width: 50%;
+  display: block;
+  position: relative;
+}
+.banner .banner-search-form > span.form-input-container i {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 1.2rem;
+  order: 1;
+  color: rgb(205, 205, 205);
+}
 .banner .banner-search-form input {
-  width: 40%;
-  padding: 20px 30px;
+  width: 90%;
+  padding: 20px 30px 20px 50px;
   border: none;
   outline: 0;
   font-family: "inter";
   font-size: 1rem;
+  position: relative;
   border: 1px solid #eee;
 }
 .banner .banner-search-form button {
@@ -152,6 +166,74 @@ body {
 .banner .banner-stats .stats-item h1 {
   font-size: 2.4rem;
   margin: 0 0 5px 0;
+}
+
+.section-categories .content-limiter {
+  padding: 90px 0;
+}
+.section-categories .content-limiter .section-heading {
+  padding: 0;
+  margin: 0 auto;
+  font-size: 3rem;
+  text-align: center;
+}
+.section-categories .content-limiter .section-secondary-heading {
+  text-align: center;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: rgb(13, 0, 255);
+}
+.section-categories .content-limiter .section-description {
+  font-size: 0.85rem;
+  line-height: 22px;
+  text-align: center;
+}
+
+.homepage-categories {
+  width: 100%;
+  display: flex;
+  margin-top: 60px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.homepage-categories .single-category {
+  width: 23%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: 300ms;
+  background-color: rgb(248, 248, 248);
+  border: 1px solid #eee;
+}
+.homepage-categories .single-category:hover {
+  transition: 400ms;
+  background-color: rgb(240, 240, 240);
+}
+.homepage-categories .single-category .job-category-title {
+  font-size: 1.1rem;
+  margin: 20px auto 5px auto;
+  text-decoration: none;
+  font-weight: 500;
+  color: #1c1c1c;
+}
+.homepage-categories .single-category i {
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  font-size: 1.4rem;
+  padding: 4px;
+  color: #fff;
+  background-color: rgb(90, 90, 242);
+}
+.homepage-categories .single-category .jobs-in-category {
+  font-size: 0.8rem;
 }
 
 /*# sourceMappingURL=main.css.map */
