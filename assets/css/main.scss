@@ -8,7 +8,13 @@ body{
     max-width: 1170px;
     margin: 0 auto;
 }
+.button{
+    padding: 15px 50px ;
+    background-color: rgb(6, 6, 6);
+    color: #fff;
+    text-decoration: none;
 
+}
 /* Header */
 .app-header {
     width: 100%; 
@@ -247,4 +253,92 @@ width: 70%;
             font-size: 0.8rem;
         }
     }
+}
+
+
+.section-latest-jobs{
+     background-color: rgb(246, 246, 249);
+     .content-limiter{
+        padding: 90px 0;
+     }
+     .section-heading{
+        padding: 0;
+        margin: 0 auto;
+        font-size: 3rem;
+        text-align: left;
+     }
+     .section-secondary-heading{
+        text-align: center;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        text-align: left;
+        color:rgb(13, 0, 255) ;
+     }
+     .section-description{
+        font-size: 0.85rem;
+        line-height: 22px;
+        text-align: left;
+     }
+     
+     .single-job--recently-posted{
+        width: 100%;
+        padding: 30px;
+        background-color:#fff ;
+        display: flex;
+        .slot-left{
+            width: 80%;
+            display: flex;
+            align-items: center;
+            .company-logo{
+                width: 60px;
+                height: 60px;
+            }
+            .job-content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-left: 20px;
+              .job-title{
+                text-align: left;
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+                text-decoration: none;
+                color:rgb(13, 13, 13) 
+              }
+            }
+            
+            .job--meta{
+                display: flex;
+                align-items: center;
+
+                .meta-item{
+                    margin: 0 10px auto auto;
+                    text-align: left;
+                    text-decoration: none;
+                    font-size: 0.85rem;
+                     color:rgb(13, 13, 13) ;
+
+                     i{
+                        width: 25px;
+                        height: 25px;
+                        font-size: .7rem;
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 40px;
+                        background-color: rgb(233, 233, 233);
+                     }
+
+                }
+            }
+        }
+
+        .slot-right{
+            width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+     }
+
 }
