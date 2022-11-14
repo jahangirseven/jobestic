@@ -12,7 +12,9 @@ increaseNumber(0,350,10,bannerStatsItems.freelancers);
 const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: true,
-    // If we need pagination
+    slidesPerView: 2.2,
+    spaceBetween: 30,
+     centeredSlides: true,
     pagination: {
       el: '.swiper-pagination',
     },

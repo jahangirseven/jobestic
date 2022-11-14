@@ -2,7 +2,7 @@
 /* Header */ 
 /* Texts */
 body {
-  font-family: "inter";
+  font-family: "Jost";
   padding: 0;
   margin: 0;
 }
@@ -391,12 +391,15 @@ body {
 }
 
 .swiper {
-  width: 600px;
-  height: 300px;
+  width: 1200px;
+  height: 100%;
 }
 
 .app-section.section-testimonials {
   padding: 90px 0;
+}
+.app-section.section-testimonials .swiper-wrapper {
+  padding: 70px 0;
 }
 .app-section.section-testimonials .section-heading {
   padding: 0;
@@ -418,21 +421,57 @@ body {
 .app-section.section-testimonials .single-testimonial {
   display: flex;
   flex-direction: column;
-  padding: 60px;
-  border: 1px solid #eee;
+  justify-content: center;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  box-shadow: 0 5px 27px rgba(0, 0, 0, 0.075);
+  border-radius: 5px;
+  opacity: 0.4;
 }
-.app-section.section-testimonials .single-testimonial .testimonial-author {
+.app-section.section-testimonials .single-testimonial.swiper-slide-active {
+  opacity: 1;
+}
+.app-section.section-testimonials .single-testimonial .short-content {
+  color: rgb(45, 215, 161);
+  margin: 0;
+}
+.app-section.section-testimonials .single-testimonial .content-self {
+  font-size: 0.9rem;
+  margin: 20px auto;
+  line-height: 23px;
+  color: rgb(51, 51, 51);
+}
+.app-section.section-testimonials .single-testimonial .testimonial-author-block {
   display: flex;
   align-items: center;
 }
-.app-section.section-testimonials .single-testimonial .testimonial-author img {
+.app-section.section-testimonials .single-testimonial .testimonial-author-block img {
   align-self: center;
 }
-.app-section.section-testimonials .single-testimonial .testimonial-author .about-author-text {
+.app-section.section-testimonials .single-testimonial .testimonial-author-block .about-author-text {
   padding-left: 20px;
 }
-.app-section.section-testimonials .single-testimonial .testimonial-author .about-author-text h4, .app-section.section-testimonials .single-testimonial .testimonial-author .about-author-text p {
+.app-section.section-testimonials .single-testimonial .testimonial-author-block .about-author-text h4 {
+  color: rgb(59, 59, 59);
+}
+.app-section.section-testimonials .single-testimonial .testimonial-author-block .about-author-text p {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: rgb(89, 89, 89);
+}
+.app-section.section-testimonials h4, .app-section.section-testimonials p {
   margin: 0;
+}
+.app-section.section-testimonials .swiper-pagination {
+  bottom: 10px;
+}
+.app-section.section-testimonials .swiper-pagination-bullet {
+  padding: 2px;
+}
+.app-section.section-testimonials .swiper-pagination-bullet-active {
+  transition: 200ms;
+  width: 15px;
+  border-radius: 8px;
 }
 
 /*# sourceMappingURL=main.css.map */
