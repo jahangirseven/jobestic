@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"  />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="assets/js/uig-exstras.js" defer></script>
     <script src="assets/js/app.js" defer></script>
     <title>Jobestic</title>
@@ -80,7 +82,7 @@
 
     <section class="app-section section-categories">
       <div class="content-limiter">
-         <h1 class="section-secondary-heading">Categories</h1>
+        <h1 class="section-secondary-heading">Categories</h1>
         <h1 class="section-heading">Popular Job Categories</h1>
         <p class="section-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Qui molestiae nulla ut optio ducimus quasi.</p>
 
@@ -146,47 +148,170 @@
 
     <section class="app-section section-latest-jobs">
       <div class="content-limiter">
-        <h1 class="section-heading">Latest posts</h1>
-        <p class="section-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Qui molestiae nulla ut optio ducimus quasi.</p>
+          <div class="section-head">
+            <div class="slot-left">
+               <h1 class="section-heading">Latest jobs</h1>
+               <p class="section-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Qui molestiae nulla ut optio ducimus quasi.</p>
+            </div>
+            
+            <div class="slot-right">
+               <a href="#" class="button transparent">
+                  All vacancies
+                  <i class="fa fa-arrow-right"></i>
+               </a>
+            </div>
+          </div><!-- section head -->
 
-        <div class="category-list homepage-categories">
-           <span class="single-job--recently-posted">
-               <span class="slot-left job-info">
-                  <img src="https://www.vasterad.com/themes/hireo_21/images/company-logo-01.png" class="company-logo"/>
-                  <span class="job-content">
-                     <a href="#" class="job-title">Front-end developer</a>
-                     <span class="job--meta">
-                        <a href="#" class="meta-item">
-                           <i class="fa fa-building"></i>
-                            Microsoft
-                        </a>
+         <div class="category-list homepage-categories">
+         <span class="single-job--recently-posted">
+            <span class="slot-left job-info">
+               <img src="https://www.vasterad.com/themes/hireo_21/images/company-logo-01.png" class="company-logo"/>
+               <span class="job-content">
+                  <a href="#" class="job-title">Front-end developer</a>
+                  <span class="job--meta">
+                     <a href="#" class="meta-item">
+                        <i class="fa fa-building"></i>
+                         Microsoft
+                     </a>
 
-                        <p class="meta-item">
-                           <i class="fa fa-map-marker"></i>
-                           Azerbaijan
-                        </p>
-                        
-                        <p class="meta-item">
-                           <i class="fa fa-briefcase"></i>
-                           Full-time 
-                        </p>
+                     <p class="meta-item">
+                        <i class="fa fa-map-marker"></i>
+                        Azerbaijan
+                     </p>
+                     
+                     <p class="meta-item">
+                        <i class="fa fa-briefcase"></i>
+                        Full-time 
+                     </p>
 
-                        <p class="meta-item">
-                           <i class="fa fa-clock-o"></i>
-                           2 days ago
-                        </p>
+                     <p class="meta-item">
+                        <i class="fa fa-clock-o"></i>
+                        2 days ago
+                     </p>
+                  </span><!-- meta -->
+               </span><!-- content -->
+            </span><!-- left slot -->
 
-                     </span>
-                  </span>
-               </span><!-- -->
+            <span class="slot-right job-link">
+                <a href="#" class="job-permalink button">Read more</a>
+            </span><!-- right slot -->
+        </span><!-- single category -->
 
-               <span class="slot-right job-link">
-                   <a href="#" class="job-permalink button">Read more</a>
-               </span><!-- -->
-           </span><!-- single category -->
+        <span class="single-job--recently-posted">
+         <span class="slot-left job-info">
+            <img src="https://www.vasterad.com/themes/hireo_21/images/company-logo-03.png" class="company-logo"/>
+            <span class="job-content">
+               <a href="#" class="job-title">Front-end developer</a>
+               <span class="job--meta">
+                  <a href="#" class="meta-item">
+                     <i class="fa fa-building"></i>
+                      Microsoft
+                  </a>
+
+                  <p class="meta-item">
+                     <i class="fa fa-map-marker"></i>
+                     Azerbaijan
+                  </p>
+                  
+                  <p class="meta-item">
+                     <i class="fa fa-briefcase"></i>
+                     Full-time 
+                  </p>
+
+                  <p class="meta-item">
+                     <i class="fa fa-clock-o"></i>
+                     2 days ago
+                  </p>
+               </span><!-- meta -->
+            </span><!-- content -->
+         </span><!-- left slot -->
+
+         <span class="slot-right job-link">
+             <a href="#" class="job-permalink button">Read more</a>
+         </span><!-- right slot -->
+     </span><!-- single category -->
+
+     <span class="single-job--recently-posted">
+      <span class="slot-left job-info">
+         <img src="https://www.vasterad.com/themes/hireo_21/images/company-logo-02.png" class="company-logo"/>
+         <span class="job-content">
+            <a href="#" class="job-title">Front-end developer</a>
+            <span class="job--meta">
+               <a href="#" class="meta-item">
+                  <i class="fa fa-building"></i>
+                   Microsoft
+               </a>
+
+               <p class="meta-item">
+                  <i class="fa fa-map-marker"></i>
+                  Azerbaijan
+               </p>
+               
+               <p class="meta-item">
+                  <i class="fa fa-briefcase"></i>
+                  Full-time 
+               </p>
+
+               <p class="meta-item">
+                  <i class="fa fa-clock-o"></i>
+                  2 days ago
+               </p>
+            </span><!-- meta -->
+         </span><!-- content -->
+      </span><!-- left slot -->
+
+         <span class="slot-right job-link">
+            <a href="#" class="job-permalink button">Read more</a>
+         </span><!-- right slot -->
+      </span><!-- single category -->
 
         </div>
       </div><!-- content limiter-->
+    </section><!-- Latest posts section-->
+
+    <section class="app-section section-secondary section--join-us">
+      <div class="content-limiter">
+         <h2 class="inner-section-heading">Are you interested ?</h2>
+         <p  class="inner-section-description"> Lorem ipsum dolor sit amet del runca acen del aklin pok</p>
+         <a href="#" class="button">Register</a>
+      </div>
+    </section>
+
+    <section class="app-section section-testimonials">
+      <div class="content-limiter">
+         <h1 class="section-secondary-heading">Categories</h1>
+         <h1 class="section-heading">Popular Job Categories</h1>
+         <p class="section-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Qui molestiae nulla ut optio ducimus quasi.</p>
+     </div>
+
+         <div class="swiper">
+            <div class="swiper-wrapper">
+               <!-- Slides -->
+               <div class="single-testimonial swiper-slide"> 
+                 <h3 class="short-content">Great website!</h3>
+                 <p class="content-self">Lorem ipsum dolor sit amet bla bla bla</p>
+                 <span class="testimonial-author">
+                    <img src="https://creativelayers.net/themes/superio/images/resource/testi-thumb-3.png" />
+                    <span class="about-author-text">
+                       <h4>Jahangir Seven</h4>
+                       <p>Front-end engineer</p>
+                    </span>
+                  </span>
+               </div>
+
+
+               <div class="swiper-slide">Slide 2</div>
+               <div class="swiper-slide">Slide 3</div>
+              </div>
+             <!-- If we need pagination -->
+             <div class="swiper-pagination"></div>
+           
+             <!-- If we need navigation buttons -->
+             <div class="swiper-button-prev"></div>
+             <div class="swiper-button-next"></div>
+         </div>
+
+ 
     </section>
 
 </body>

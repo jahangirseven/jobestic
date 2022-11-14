@@ -13,7 +13,10 @@ body{
     background-color: rgb(6, 6, 6);
     color: #fff;
     text-decoration: none;
-
+}
+.button.transparent{
+  background-color: transparent;
+  color: #000;
 }
 /* Header */
 .app-header {
@@ -258,12 +261,27 @@ width: 70%;
 
 .section-latest-jobs{
      background-color: rgb(246, 246, 249);
+     .section-head{
+        display: flex;
+        justify-content: space-between;
+        .slot-left,
+        .slot-right{
+            display: flex;
+        }
+        .slot-left{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .slot-right .button.transparent{
+            align-self: center;
+        }
+     }
      .content-limiter{
         padding: 90px 0;
      }
      .section-heading{
         padding: 0;
-        margin: 0 auto;
+        margin: 0;
         font-size: 3rem;
         text-align: left;
      }
@@ -284,7 +302,14 @@ width: 70%;
         width: 100%;
         padding: 30px;
         background-color:#fff ;
-        display: flex;
+        display: flex;;
+        margin-bottom: 20px;
+        border: 1px solid transparent;
+        &:hover{
+            transition: 200ms;
+        border: 1px solid rgb(241, 241, 241);
+
+        }
         .slot-left{
             width: 80%;
             display: flex;
@@ -317,11 +342,11 @@ width: 70%;
                     text-decoration: none;
                     font-size: 0.85rem;
                      color:rgb(13, 13, 13) ;
-
                      i{
                         width: 25px;
                         height: 25px;
                         font-size: .7rem;
+                        margin-right: 5px;
                         display: inline-flex;
                         justify-content: center;
                         align-items: center;
@@ -342,3 +367,96 @@ width: 70%;
      }
 
 }
+
+
+.app-section.section--join-us{
+    width: 100%;
+    height: auto;
+    background-color: blue;
+    position: relative;
+    z-index: 1;
+     
+    &:after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-image: url('http://lockthemes.com/ennex/wp-content/uploads/sites/13/2022/10/bgt-1.png');
+        background-position: center center;
+        opacity: .2;        
+    }
+   .content-limiter{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       padding: 90px 0;
+       .inner-section-heading{
+        margin: 10px auto;
+        font-size: 3rem;
+        color: #fff;
+       }
+       
+       .inner-section-description{
+        margin: 10px auto;
+        font-size: 1rem;
+        color: #fff;
+       }
+
+       .button{
+        margin: 10px auto;
+       }
+   } 
+}
+
+
+.swiper {
+    width: 600px;
+    height: 300px;
+  }
+
+
+  .app-section.section-testimonials{
+    padding: 90px 0;
+ 
+    .section-heading{
+        padding: 0;
+        margin: 0 auto;
+        font-size: 3rem;
+        text-align: center;
+     }
+     .section-secondary-heading{
+        text-align: center;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        color:rgb(13, 0, 255) ;
+     }
+     .section-description{
+        font-size: 0.85rem;
+        line-height: 22px;
+        text-align: center;
+     }
+
+     .single-testimonial{
+        display: flex;
+        flex-direction: column;
+        padding: 60px;
+        border: 1px solid #eee;
+     }
+    .single-testimonial .testimonial-author{
+       display: flex;
+       align-items: center;
+       img{
+        align-self: center;
+       }
+       .about-author-text{
+         padding-left: 20px;
+        h4,p{
+            margin: 0;
+        }
+       }
+    }
+  }
