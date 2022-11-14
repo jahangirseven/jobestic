@@ -1,6 +1,7 @@
 /* General Colors*/
 /* Header */ 
 /* Texts */
+/* Footer */
 body {
   font-family: "Jost";
   padding: 0;
@@ -472,6 +473,13 @@ body {
   transition: 200ms;
   width: 15px;
   border-radius: 8px;
+}
+
+.app-footer {
+  background-color: #0e0e0e;
+}
+.app-footer .content-limiter {
+  padding: 90px 0;
 }
 
 /*# sourceMappingURL=main.css.map */

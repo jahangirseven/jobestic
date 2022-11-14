@@ -1,4 +1,4 @@
-@use "colors";
+@use "colors" as colors;
 body{
      font-family: 'Jost';
     padding: 0;
@@ -500,5 +500,12 @@ width: 70%;
         transition: 200ms;
         width: 15px;
         border-radius: 8px;
+    }
+  }
+
+  .app-footer{
+    background-color: colors.$footer-background;
+    .content-limiter{
+        padding: 90px 0;
     }
   }
