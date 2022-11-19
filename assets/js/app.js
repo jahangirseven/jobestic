@@ -25,3 +25,10 @@ const swiper = new Swiper('.swiper', {
     },
 
   });
+
+
+  //
+
+  document.querySelector('.header-icon--messages').addEventListener('click',()=>{
+    document.querySelector('.header-inbox-box').classList.toggle('active');
+  })

@@ -31,6 +31,8 @@ body {
   min-height: 60px;
   border-bottom: 1px solid rgb(234, 234, 234);
   background-color: #fff;
+  position: fixed;
+  z-index: 2;
 }
 .app-header .content-limiter {
   display: flex;
@@ -58,17 +60,62 @@ body {
 .header-navigation ul li {
   padding: 5px 10px;
   border-radius: 2px;
+  position: relative;
   transition: 200ms;
+  transition-delay: 100ms;
 }
 .header-navigation ul li:hover {
   transition: 200ms;
   background-color: rgb(243, 243, 243);
+}
+.header-navigation ul li:hover > ul {
+  transition: 200ms;
+  top: 50px;
+  opacity: 1;
+  visibility: visible;
 }
 .header-navigation ul li a {
   color: #333;
   font-size: 0.9rem;
   font-weight: 500;
   text-decoration: none;
+}
+.header-navigation ul li ul {
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  padding: 20px 0;
+  border: 1px solid rgb(222, 222, 222);
+  z-index: 3;
+  background: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: 200ms;
+  transition-delay: 100ms;
+}
+.header-navigation ul li ul li a {
+  width: 100%;
+  display: block;
+  padding: 2px 20px;
+  margin: 0;
+  box-sizing: border-box;
+}
+.header-navigation ul li ul li ul {
+  left: 106%;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 200ms;
+  transition-delay: 100ms;
+}
+.header-navigation ul li ul li:hover > ul {
+  transition: 200ms;
+  top: 0px;
+  left: 100%;
+  opacity: 1;
+  visibility: visible;
 }
 
 .header-extras {
@@ -80,10 +127,97 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.header-extras .header-extra-item .header-inbox-box {
+  width: 400px;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  z-index: 3;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  background-color: rgb(255, 255, 255);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+  transition: 200ms all;
+}
+.header-extras .header-extra-item .header-inbox-box.active {
+  opacity: 1;
+  visibility: visible;
+  top: 50px;
+  transform: scale(1);
+  transition: 200ms all;
+}
+.header-extras .header-extra-item .header-inbox-box .header-inbox-popup {
+  width: 100%;
+  padding: 2px 30px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+.header-extras .header-extra-item .header-inbox-box .header-inbox-popup a {
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: #1c3eff;
+}
+.header-extras .header-extra-item .header-inbox-box .header-inbox-popup a:hover {
+  text-decoration: underline;
+}
+.header-extras .header-extra-item .header-inbox-box .single-message {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+}
+.header-extras .header-extra-item .header-inbox-box .single-message:hover {
+  background-color: #eee;
+}
+.header-extras .header-extra-item .header-inbox-box .single-message .inbox-sender-avatar {
+  width: 70px;
+  height: 70px;
+  align-self: center;
+}
+.header-extras .header-extra-item .header-inbox-box .single-message .message-textcontent--header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 40px 0 20px;
+}
+.header-extras .header-extra-item .header-inbox-box .single-message .message-textcontent--header a {
+  text-decoration: none;
+}
+.header-extras .header-extra-item .header-inbox-box .single-message .message-textcontent--header p, .header-extras .header-extra-item .header-inbox-box .single-message .message-textcontent--header h5 {
+  margin: 2px 0;
+  color: rgb(26, 26, 26);
+}
+.header-extras .header-extra-item .header-inbox-box .single-message .message-textcontent--header h5 {
+  font-size: 1rem;
+}
+.header-extras .header-extra-item .header-inbox-box .single-message .message-textcontent--header p {
+  font-size: 0.8rem;
 }
 .header-extras i.fa {
   padding: 8px;
+  position: relative;
   color: #5c5c5c;
+}
+.header-extras .header-message-dot {
+  width: 11px;
+  height: 11px;
+  display: block;
+  background-color: rgb(21, 134, 255);
+  box-shadow: 0 3px 7px rgba(21, 56, 255, 0.384);
+  border-radius: 15px;
+  position: absolute;
+  top: 2px;
+  right: 1px;
 }
 
 .header-extras .user-avatar--header {
@@ -99,7 +233,7 @@ body {
   display: flex;
   align-items: center;
   z-index: 1;
-  background-color: rgb(64, 16, 255);
+  background-color: #141127;
 }
 .banner:after {
   content: "";
@@ -150,7 +284,7 @@ body {
   padding: 20px 30px 20px 50px;
   border: none;
   outline: 0;
-  font-family: "inter";
+  font-family: "jost";
   font-size: 1rem;
   position: relative;
   border: 1px solid #eee;
@@ -162,7 +296,7 @@ body {
   padding: 20px 40px;
   display: flex;
   font-size: 0.9rem;
-  font-family: "inter";
+  font-family: "jost";
   color: #fff;
 }
 .banner .banner-search-form button i {
@@ -194,7 +328,7 @@ body {
   text-align: center;
   font-size: 0.85rem;
   text-transform: uppercase;
-  color: rgb(13, 0, 255);
+  color: #1c3eff;
 }
 .section-categories .content-limiter .section-description {
   font-size: 0.85rem;
@@ -243,7 +377,7 @@ body {
   font-size: 1.4rem;
   padding: 4px;
   color: #fff;
-  background-color: rgb(90, 90, 242);
+  background-color: #1c3eff;
 }
 .homepage-categories .single-category .jobs-in-category {
   font-size: 0.8rem;
@@ -281,7 +415,7 @@ body {
   font-size: 0.85rem;
   text-transform: uppercase;
   text-align: left;
-  color: rgb(13, 0, 255);
+  color: #1c3eff;
 }
 .section-latest-jobs .section-description {
   font-size: 0.85rem;
@@ -354,7 +488,7 @@ body {
 .app-section.section--join-us {
   width: 100%;
   height: auto;
-  background-color: blue;
+  background-color: #1c3eff;
   position: relative;
   z-index: 1;
 }
@@ -412,7 +546,7 @@ body {
   text-align: center;
   font-size: 0.85rem;
   text-transform: uppercase;
-  color: rgb(13, 0, 255);
+  color: #1c3eff;
 }
 .app-section.section-testimonials .section-description {
   font-size: 0.85rem;
@@ -468,6 +602,7 @@ body {
 }
 .app-section.section-testimonials .swiper-pagination-bullet {
   padding: 2px;
+  background-color: #1c3eff;
 }
 .app-section.section-testimonials .swiper-pagination-bullet-active {
   transition: 200ms;
@@ -479,7 +614,28 @@ body {
   background-color: #0e0e0e;
 }
 .app-footer .content-limiter {
-  padding: 90px 0;
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.app-footer .footer-widget {
+  width: 23%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.app-footer .footer-widget .widger-header {
+  color: #fff;
+}
+.app-footer .footer-widget .footer--link {
+  text-decoration: none;
+  padding: 3px 0;
+  color: #fff;
+  opacity: 0.8;
+}
+.app-footer .footer-widget .footer--link:hover {
+  transition: 200ms;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=main.css.map */
