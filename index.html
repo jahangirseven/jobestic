@@ -14,7 +14,7 @@
     <title>Jobestic</title>
 </head>
 <body>
-    <header class="app-header">
+     <header class="app-header enable-sticky--header">
         <div class="content-limiter">
            <span class="header-logo">
              <a>
@@ -45,7 +45,9 @@
               </ul>
            </nav>
            <div class="header-extras">
-             <i class="fa fa-bookmark-o fa-regular rgb(255, 107, 21)"></i>
+            <div class="header-extra-item">
+               <i class="fa fa-bookmark-o fa-regular rgb(255, 107, 21)"></i>
+            </div>
              <div class="header-extra-item">
                 <i class="fa fa-envelope-o fa-regular header-icon--messages "><span class="header-message-dot"></span></i>
                 <div class="header-inbox-box">
@@ -83,10 +85,29 @@
                           </a>
                      </span>
                    </span><!-- Single message-->
-                </div>
+                </div><!-- Header inbox popup-->
+             </div><!-- Header item-->
+             <div class="header-extra-item profile-info">
+                  <img  class="user-avatar--header header-extra-item" src="img/user-logged.png" />
+                  <div class="header-profile-box">
+                     <div class="slot-top profile-intro">
+                        <img class="profile-avatar--inner" src="http://127.0.0.1:5500/img/user-logged.png" />
+                        <h5 class="profile--fullname">Jahangir Seven</h5>
+                        <p class="profile--mail">yourmail@example.com</p>
+                     </div> 
+
+                     <div class="slot-bottom">
+                        <ul>
+                           <li><a href="#"><i class="fa fa-star"></i> Profile</a></li>
+                           <li><a href="#"><i class="fa fa-heart"></i>Edit profile </a></li>
+                           <li><a href="#"><i class="fa fa-cog"></i>My Profile</a></li>
+                           <li><a href="#"><i class="fa fa-user"></i>My Profile</a></li>
+                           <li><a href="#"><i class="fa fa-star"></i>My Profile</a></li>
+                        </ul>
+                     </div>
+                  </div>
              </div>
-             <img  class="user-avatar--header header-extra-item" src="img/user-logged.png" />
-           </div><!-- extras -->
+            </div><!-- extras -->
 
         </div>
     </header> <!-- Main header -->
@@ -215,7 +236,7 @@
             </div>
           </div><!-- section head -->
 
-         <div class="category-list homepage-categories">
+         <div class="homepage-latest-posts-container">
          <span class="single-job--recently-posted">
             <span class="slot-left job-info">
                <img src="https://www.vasterad.com/themes/hireo_21/images/company-logo-01.png" class="company-logo"/>
@@ -322,6 +343,49 @@
       </div><!-- content limiter-->
     </section><!-- Latest posts section-->
 
+
+    <section class="app-section section-city-categories">
+      <div class="content-limiter">
+          <div class="section-head">
+            <div class="slot-left">
+               <h1 class="section-heading">Jobs by cities</h1>
+               <p class="section-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Qui molestiae nulla ut optio ducimus quasi.</p>
+            </div>
+            
+            <div class="slot-right">
+               <a href="#" class="button transparent">
+                  All vacancies
+                  <i class="fa fa-arrow-right"></i>
+               </a>
+            </div>
+          </div><!-- section head -->
+
+         <div class="homepage-categories-container">
+          <div class="single-category--city">
+             <h4>Baku</h4>
+             <p>2432 active jobs</p>
+          </div><!-- single category-->
+
+          <div class="single-category--city">
+            <h4>Baku</h4>
+            <p>2432 active jobs</p>
+         </div><!-- single category-->
+
+         <div class="single-category--city">
+            <h4>Baku</h4>
+            <p>2432 active jobs</p>
+         </div><!-- single category-->
+
+         <div class="single-category--city">
+            <h4>Baku</h4>
+            <p>2432 active jobs</p>
+         </div><!-- single category-->
+
+         </div>
+      </div><!-- content limiter-->
+    </section><!-- Category by cities section-->
+
+    
     <section class="app-section section-secondary section--join-us">
       <div class="content-limiter">
          <h2 class="inner-section-heading">Are you interested ?</h2>
@@ -381,6 +445,8 @@
            
          </div>
     </section><!-- testimonial -->
+   
+   
     <footer class="app-footer">
       <div class="content-limiter">
          <div class="footer-widget">

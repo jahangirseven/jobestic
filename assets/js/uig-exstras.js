@@ -16,3 +16,15 @@ function increaseNumber(start,limit,delay,domElement){
    
   
   increaseNumber()
+
+  /* Header item popup toggle */
+
+  function toggleInnerElement(parentElement_selector,popupElement_selector,classname){
+      try{
+         document.querySelector(parentElement_selector).addEventListener('click',()=>{
+            document.querySelector(popupElement_selector).classList.toggle(classname);
+         })
+      }catch(e){
+          console.log('ERROR: Failed to find DOM elements')
+      }
+  }

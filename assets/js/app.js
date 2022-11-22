@@ -28,7 +28,30 @@ const swiper = new Swiper('.swiper', {
 
 
   //
+ 
 
-  document.querySelector('.header-icon--messages').addEventListener('click',()=>{
-    document.querySelector('.header-inbox-box').classList.toggle('active');
+  toggleInnerElement('.header-icon--messages','.header-inbox-box','active')
+  toggleInnerElement('.header-extra-item.profile-info','.header-profile-box','active')
+
+ 
+  
+
+  let startingPosition = window.scrollY;
+  console.log(startingPosition)
+  document.addEventListener('scroll',()=>{
+       if(window.scrollY >  startingPosition){
+        startingPosition = window.scrollY
+        console.log('show');
+        document.querySelector('.app-header').classList.add('disable-sticky--header')
+        document.querySelector('.app-header').classList.remove('enable-sticky--header')
+
+       }else{
+        console.log('hide');
+        startingPosition = window.scrollY
+ 
+        document.querySelector('.app-header').classList.add('enable-sticky--header')
+        document.querySelector('.app-header').classList.remove('disable-sticky--header')
+
+       }
+
   })
