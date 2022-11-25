@@ -679,11 +679,57 @@ body{
      }
      .single-category--city{
         width:23%;
-        height: 250px;
+        height: 320px;
         padding: 20px;
         box-sizing: border-box;
         background-color: red;
-     }
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        background-image: url('https://assets3.thrillist.com/v1/image/2858077/828x1500/flatten;scale;webp=auto;jpeg_quality=60.jpg');
+        background-position: center center;
+        background-size: cover;
+        z-index: 1;
+        border-radius: 3px;
+        overflow: hidden;
+        transform: scale(1);
+        transition: 230ms transform ;
+
+        &:hover{
+            transition: 230ms ;
+            transform: scale(1.1);
+        }
+        &::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top:0;
+            left: 0;
+            z-index: -1;
+            background-color: rgba(0, 0, 0, 0.373);
+        }
+        &:hover::after{
+            transition: 230ms;
+            background-color: rgba(0, 0, 0, 0.559);
+      
+        }
+
+        a,p{
+            text-decoration: none;
+            color:#fff;
+            margin: 5px 0;
+        }
+        a.city-name--self{
+            font-size: 1.5rem;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
 
